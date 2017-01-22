@@ -21,12 +21,48 @@
                         <thead>
                         <tr class="sortable ">
                             <th class="table-id" st-sort="id" st-sort-default="true">#</th>
-                            <th st-sort="name">Name</th>
+                            <th st-sort="first_name">First Name</th>
+                            <th st-sort="last_name">Last Name</th>
+                            <th st-sort="mail">E-mail</th>
+                            <th st-sort="phone_number">Phone Number</th>
+                            <th st-sort="gender">Gender</th>
+                            <th st-sort="address">Address</th>
+                            <th st-sort="city">City</th>
+                            <th st-sort="state">State</th>
+                            <th st-sort="country">Country</th>
+                            <th st-sort="zip_code">Zip Code</th>
                             <th>Actions</th>
                         </tr>
                         <tr>
                             <th></th>
-                            <th><input st-search="name" placeholder="Search Name"
+                            <th><input st-search="first_name" placeholder="Search First Name"
+                                       class="input-sm form-control search-input"
+                                       type="search"/></th>
+                             <th><input st-search="last_name" placeholder="Search Last Name"
+                                       class="input-sm form-control search-input"
+                                       type="search"/></th>
+                             <th><input st-search="mail" placeholder="Search Mail"
+                                       class="input-sm form-control search-input"
+                                       type="search"/></th>
+                             <th><input st-search="phone_number" placeholder="Search Phone Number"
+                                       class="input-sm form-control search-input"
+                                       type="search"/></th>
+                             <th><input st-search="gender" placeholder="Search Gender"
+                                       class="input-sm form-control search-input"
+                                       type="search"/></th>
+                             <th><input st-search="address" placeholder="Search Address"
+                                       class="input-sm form-control search-input"
+                                       type="search"/></th>
+                             <th><input st-search="city" placeholder="Search City"
+                                       class="input-sm form-control search-input"
+                                       type="search"/></th>
+                             <th><input st-search="state" placeholder="Search State"
+                                       class="input-sm form-control search-input"
+                                       type="search"/></th>
+                             <th><input st-search="country" placeholder="Search country"
+                                       class="input-sm form-control search-input"
+                                       type="search"/></th>
+                             <th><input st-search="zip_code" placeholder="Search Zip Code"
                                        class="input-sm form-control search-input"
                                        type="search"/></th>
                             <th></th>
@@ -37,7 +73,16 @@
                             <td class="table-id">
                                 {{members.indexOf(member) + 1}}
                             </td>
-                            <td>{{ member.name }}</td>
+                            <td>{{ member.first_name }}</td>
+                            <td>{{ member.last_name }}</td>
+                            <td>{{ member.mail }}</td>
+                            <td>{{ member.phone_number }}</td>
+                            <td>{{ member.gender }}</td>
+                            <td>{{ member.address }}</td>
+                            <td>{{ member.city }}</td>
+                            <td>{{ member.state }}</td>
+                            <td>{{ member.country }}
+                            <td>{{ member.zip_code }}</td>
                             <td>
                                 <div class="btn-group" role="group" aria-label="Basic example">
                                     <a class="btn btn-sm btn-warning btn-primary" href="#/member/edit/{{ member.id }}">
