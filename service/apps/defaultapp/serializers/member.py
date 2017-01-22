@@ -1,8 +1,5 @@
 from rest_framework.serializers import ModelSerializer, CharField
-from apps.defaultapp.models import User
-from apps.defaultapp.models.address import Address
-from apps.defaultapp.serializers import PrimaryKeyRelatedFieldWithSerialization
-from apps.defaultapp.serializers.address import AddressSerializer
+from apps.defaultapp.models import Member
 
 
 class MemberSerializer(ModelSerializer):
@@ -18,7 +15,7 @@ class MemberSerializer(ModelSerializer):
     zip_code = CharField(max_length=100, allow_null=True, allow_blank=True)
 
     class Meta:
-        model = User
+        model = Member
         fields = (
             'id',
             'first_name',
@@ -26,5 +23,9 @@ class MemberSerializer(ModelSerializer):
             'mail',
             'address',
             'gender',
-            'phone_number'
+            'phone_number',
+            'city',
+            'state',
+            'country',
+            'zip_code'
         )

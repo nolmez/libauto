@@ -1,7 +1,5 @@
 from django.db import models
 from django.db.models.fields import CharField
-from django.db.models import ForeignKey
-from apps.defaultapp.models import Address
 
 
 class Member(models.Model):
