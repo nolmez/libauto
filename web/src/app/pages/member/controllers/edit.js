@@ -24,7 +24,7 @@
             console.log(response);
         });
 
-        function updateMember(data, deferred) {
+        function updateMember(member, deferred) {
             $http({
                 method: 'PUT',
                 url: 'http://localhost:3000/api/member/' + id + '/',
