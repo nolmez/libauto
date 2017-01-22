@@ -10,6 +10,7 @@ from apps.defaultapp.views.library import LibraryViewSet
 from apps.defaultapp.views.library_book import LibraryBookViewSet
 from apps.defaultapp.views.member import MemberViewSet
 from apps.defaultapp.views.publishing_house import PublishingHouseViewSet
+from apps.defaultapp.views.statistics import CategoryBasedBookCountsViewSet
 
 router = DefaultRouter()
 router.register(r'book', BookViewSet, base_name='book-view')
@@ -20,6 +21,7 @@ router.register(r'member', MemberViewSet, base_name='user-view')
 router.register(r'publishing_house', PublishingHouseViewSet, base_name='publishing_house-view')
 router.register(r'library', LibraryViewSet, base_name='library-view')
 router.register(r'library_book', LibraryBookViewSet, base_name='library_book-view')
+router.register(r'category_based_book_counts', CategoryBasedBookCountsViewSet, base_name='category_based_book_counts-view')
 
 urlpatterns = [
     # url(r'^admin/', include(admin.site.urls))

@@ -24,7 +24,7 @@
             console.log(response);
         });
 
-        function updatePublishingHouse(data, deferred) {
+        function updatePublishingHouse(publishing_house, deferred) {
             $http({
                 method: 'PUT',
                 url: 'http://localhost:3000/api/publishing_house/' + id + '/',
