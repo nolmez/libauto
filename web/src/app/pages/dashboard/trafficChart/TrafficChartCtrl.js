@@ -48,7 +48,7 @@
             for (var j = 0; j < 5; j++) {
                 labels.push(receivedDataSorted[j].name);
                 data.push(receivedDataSorted[j].book_counts);
-                percentage.push(receivedDataSorted[j].book_counts * 100 / $scope.total_books_count)
+                percentage.push(parseInt(receivedDataSorted[j].book_counts * 100 / $scope.total_books_count));
             }
 
 
