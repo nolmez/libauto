@@ -22,11 +22,31 @@
                         <tr class="sortable ">
                             <th class="table-id" st-sort="id" st-sort-default="true">#</th>
                             <th st-sort="name">Name</th>
+                            <th st-sort="address">Address</th>
+                            <th st-sort="city">City</th>
+                            <th st-sort="state">State</th>
+                            <th st-sort="Country">Country</th>
+                            <th st-sort="zip_code">Zip Code</th>
                             <th>Actions</th>
                         </tr>
                         <tr>
                             <th></th>
                             <th><input st-search="name" placeholder="Search Name"
+                                       class="input-sm form-control search-input"
+                                       type="search"/></th>
+                             <th><input st-search="address" placeholder="Search Address"
+                                       class="input-sm form-control search-input"
+                                       type="search"/></th>
+                            <th><input st-search="city" placeholder="Search City"
+                                       class="input-sm form-control search-input"
+                                       type="search"/></th>
+                            <th><input st-search="state" placeholder="Search State"
+                                       class="input-sm form-control search-input"
+                                       type="search"/></th>
+                            <th><input st-search="country" placeholder="Search Country"
+                                       class="input-sm form-control search-input"
+                                       type="search"/></th>
+                            <th><input st-search="zip_code" placeholder="Search zip_code"
                                        class="input-sm form-control search-input"
                                        type="search"/></th>
                             <th></th>
@@ -38,6 +58,11 @@
                                 {{publishing_houses.indexOf(publishing_house) + 1}}
                             </td>
                             <td>{{ publishing_house.name }}</td>
+                            <td>{{ publishing_house.address }}</td>
+                            <td>{{ publishing_house.city }}</td>
+                            <td>{{ publishing_house.state }}</td>
+                            <td>{{ publishing_house.country }}</td>
+                            <td>{{ publishing_house.zip_code }}</td>
                             <td>
                                 <div class="btn-group" role="group" aria-label="Basic example">
                                     <a class="btn btn-sm btn-warning btn-primary" href="#/publishing_house/edit/{{ publishing_house.id }}">

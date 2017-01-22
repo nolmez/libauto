@@ -22,11 +22,33 @@
                         <tr class="sortable ">
                             <th class="table-id" st-sort="id" st-sort-default="true">#</th>
                             <th st-sort="name">Name</th>
+                            <th st-sort="publication_year">Publication Year</th>
+                            <th st-sort="number_of_pages">Number of Pages</th>
+                            <th st-sort="isbn">ISBN</th>
+                            <th st-sort="categories">Categories</th>
+                            <th st-sort="isbn">ISBN</th>
+                            <th st-sort="publishing_house">Publishing House</th>
+                            <th st-sort="authors">Authors</th>
                             <th>Actions</th>
                         </tr>
                         <tr>
                             <th></th>
                             <th><input st-search="name" placeholder="Search Name"
+                                       class="input-sm form-control search-input"
+                                       type="search"/></th>
+                            <th><input st-search="publication_year" placeholder="Search Publication Year"
+                                       class="input-sm form-control search-input"
+                                       type="search"/></th>
+                            <th><input st-search="number_of_pages" placeholder="Search Number of Pages"
+                                       class="input-sm form-control search-input"
+                                       type="search"/></th>
+                            <th><input st-search="isbn" placeholder="Search ISBN"
+                                       class="input-sm form-control search-input"
+                                       type="search"/></th>
+                            <th><input st-search="publishing_house" placeholder="Search Publishing House"
+                                       class="input-sm form-control search-input"
+                                       type="search"/></th>
+                            <th><input st-search="authors" placeholder="Search Authors"
                                        class="input-sm form-control search-input"
                                        type="search"/></th>
                             <th></th>
@@ -38,6 +60,11 @@
                                 {{books.indexOf(book) + 1}}
                             </td>
                             <td>{{ book.name }}</td>
+                            <td>{{ book.publication_year }}</td>
+                            <td>{{ book.number_of_pages }}</td>
+                            <td>{{ book.isbn }}</td>
+                            <td>{{ book.publishing_house }}</td>
+                            <td>{{ book.authors }}</td>
                             <td>
                                 <div class="btn-group" role="group" aria-label="Basic example">
                                     <a class="btn btn-sm btn-warning btn-primary" href="#/book/edit/{{ book.id }}">
