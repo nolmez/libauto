@@ -1,0 +1,68 @@
+<div class="widgets">
+<div class="add-row-editable-table">
+  <a class="btn btn-primary" href="#/publishing_house/add">
+      <span class="ion-plus"></span>
+      Add Publishing House
+  </a>
+</div>
+    <div class="row">
+        <div class="col-md-12">
+            <div ba-panel ba-panel-class="with-scroll">
+
+                <div class="horizontal-scroll">
+                    <div class="form-group select-page-size-wrap ">
+                        <label>Rows on page
+                            <select class="form-control selectpicker show-tick" title="Rows on page" selectpicker
+                                    ng-model="authorsPageSize" ng-options="i for i in [5,10,15,20,25]">
+                            </select>
+                        </label>
+                    </div>
+                    <table class="table" st-table="safePublishingHouses" st-safe-src="publishing_houses">
+                        <thead>
+                        <tr class="sortable ">
+                            <th class="table-id" st-sort="id" st-sort-default="true">#</th>
+                            <th st-sort="name">Name</th>
+                            <th>Actions</th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th><input st-search="name" placeholder="Search Name"
+                                       class="input-sm form-control search-input"
+                                       type="search"/></th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="publishing_house in safePublishingHouses">
+                            <td class="table-id">
+                                {{publishing_houses.indexOf(publishing_house) + 1}}
+                            </td>
+                            <td>{{ publishing_house.name }}</td>
+                            <td>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <a class="btn btn-sm btn-warning btn-primary" href="#/publishing_house/edit/{{ publishing_house.id }}">
+                                        <span class="ion-edit"></span></a><button ng-click="removePublishingHouse(publishing_house)" class="btn btn-sm btn-danger btn-primary">
+                                        <span class="ion-trash-b"></span></button>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <td colspan="6" class="text-center">
+                                <div st-pagination="" st-items-by-page="authorsPageSize" st-displayed-pages="5"></div>
+                            </td>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+

@@ -1,0 +1,10 @@
+<div class="modal-content">
+    <div class="modal-header bg-danger">
+        <i class="ion-flame modal-icon"></i><span> {{modalOptions.headerText}}</span>
+    </div>
+    <div class="modal-body text-center">{{modalOptions.bodyText}}</div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-danger" ng-click="modalOptions.close()">{{modalOptions.closeButtonText}}</button>
+        <button type="button" class="btn btn-danger" ng-click="modalOptions.ok()">{{modalOptions.actionButtonText}}</button>
+    </div>
+</div>

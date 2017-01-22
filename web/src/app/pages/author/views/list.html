@@ -1,0 +1,71 @@
+<div class="widgets">
+<div class="add-row-editable-table">
+  <a class="btn btn-primary" href="#/author/add">
+      <span class="ion-plus"></span>
+      Add Author
+  </a>
+</div>
+    <div class="row">
+        <div class="col-md-12">
+            <div ba-panel ba-panel-class="with-scroll">
+
+                <div class="horizontal-scroll">
+                    <div class="form-group select-page-size-wrap ">
+                        <label>Rows on page
+                            <select class="form-control selectpicker show-tick" title="Rows on page" selectpicker
+                                    ng-model="authorsPageSize" ng-options="i for i in [5,10,15,20,25]">
+                            </select>
+                        </label>
+                    </div>
+                    <table class="table" st-table="safeAuthors" st-safe-src="authors">
+                        <thead>
+                        <tr class="sortable ">
+                            <th class="table-id" st-sort="id" st-sort-default="true">#</th>
+                            <th st-sort="first_name">First Name</th>
+                            <th st-sort="last_name">Last Name</th>
+                            <th>Actions</th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th><input st-search="first_name" placeholder="Search First Name"
+                                       class="input-sm form-control search-input"
+                                       type="search"/></th>
+                            <th><input st-search="last_name" placeholder="Search Last Name"
+                                       class="input-sm form-control search-input"
+                                       type="search"/></th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="author in safeAuthors">
+                            <td class="table-id">{{ author.id }}</td>
+                            <td>{{ author.first_name }}</td>
+                            <td>{{ author.last_name }}</td>
+                            <td>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <a class="btn btn-sm btn-warning btn-primary" href="#/author/edit/{{ author.id }}">
+                                        <span class="ion-edit"></span></a><button ng-click="removeAuthor(author)" class="btn btn-sm btn-danger btn-primary">
+                                        <span class="ion-trash-b"></span></button>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <td colspan="6" class="text-center">
+                                <div st-pagination="" st-items-by-page="authorsPageSize" st-displayed-pages="5"></div>
+                            </td>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
