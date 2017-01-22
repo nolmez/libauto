@@ -7,39 +7,34 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="form-group">
-                        <label for="inputName">Name</label>
-                        <input type="text" ng-model="book.name" class="form-control" id="inputName" placeholder="Name">
-                    </div>
-                </div>
-                 <div class="col-sm-12">
-                    <div class="form-group">
-                        <label for="publication_year">Publication Year</label>
-                        <input type="text" ng-model="book.name" class="form-control" id="publication_year" placeholder="Publication Year">
-                    </div>
-                      <div class="form-group">
-                        <label for="number_of_pages">Number of Pages</label>
-                        <input type="text" ng-model="book.name" class="form-control" id="number_of_pages" placeholder="Number of Pages">
-                    </div>
-                     <div class="form-group">
-                        <label for="isbn">ISBN</label>
-                        <input type="text" ng-model="book.name" class="form-control" id="isbn" placeholder="Isbn">
-                    </div>
-                     <div class="form-group">
-                        <label for="categories">Categories</label>
-                        <input type="text" ng-model="book.name" class="form-control" id="categories" placeholder="Categories">
-                    </div>
-                      <div class="form-group">
-                        <label for="publishing_house">Publishing House</label>
-                        <input type="text" ng-model="book.name" class="form-control" id="publishing_house" placeholder="Publishing House">
-                    </div>
-                      <div class="form-group">
-                        <label for="authors">Authors</label>
-                        <input type="text" ng-model="book.name" class="form-control" id="authors" placeholder="Authors">
+                        <label for="first_name">First Name</label>
+                        <input type="text" ng-model="author.first_name" class="form-control" id="inputFirstName" placeholder="First Name">
                     </div>
                 </div>
             </div>
-            <a class="btn btn-default" href="#/book">Cancel</a>
-            <button type="submit" ng-click="save(book)" class="btn btn-primary pull-right">Submit</button>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label for="last_name">Last Name</label>
+                        <input type="text" ng-model="author.last_name" class="form-control" id="inputLastName" placeholder="Last Name">
+                    </div>
+                </div>
+            </div>
+             <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="text" ng-model="author.email" class="form-control" id="email" placeholder="E-mail">
+                    </div>
+                     <div class="form-group">
+                        <label for="phone_number">Phone Number</label>
+                        <input type="text" ng-model="author.phone_number" class="form-control" id="phone_number" placeholder="Phone Number">
+                    </div>
+                </div>
+
+            </div>
+            <a class="btn btn-default" href="#/author">Cancel</a>
+            <button type="submit"  ng-click="save(author)" class="btn btn-primary pull-right">Submit</button>
         </div>
     </div>
 </div>
