@@ -33,7 +33,9 @@
                 },
                 data: {
                     first_name: author.first_name,
-                    last_name: author.last_name
+                    last_name: author.last_name,
+                    email: author.email,
+                    phone_number: author.phone_number
                 }
             }).then(function successCallback(response) {
                 deferred.resolve(response);

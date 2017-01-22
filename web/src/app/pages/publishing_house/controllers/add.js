@@ -19,7 +19,12 @@
                     'Access-Control-Allow-Origin': '*'
                 },
                 data: {
-                    name: publishing_house.name
+                    name: publishing_house.name,
+                    address:publishing_house.address,
+                    city:publishing_house.city,
+                    state:publishing_house.state,
+                    country:publishing_house.country,
+                    zip_code:publishing_house.zip_code
                 }
             }).then(function successCallback(response) {
                 deferred.resolve(response);
