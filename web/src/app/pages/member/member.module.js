@@ -19,7 +19,7 @@
                 // abstract: true,
                 title: 'Members',
                 sidebarMeta: {
-                    icon: 'ion-ios-pricetags-outline',
+                    icon: 'ion-ios-people-outline',
                     order: 100
                 }
             })

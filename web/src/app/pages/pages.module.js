@@ -15,7 +15,6 @@
         'BlurAdmin.pages.book',
         'BlurAdmin.pages.publishing_house',
         'BlurAdmin.pages.member'
-        // 'BlurAdmin.pages.members',
 
         // 'BlurAdmin.pages.dashboard',
         // 'BlurAdmin.pages.ui',
