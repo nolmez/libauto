@@ -11,30 +11,71 @@
                         <input type="text" ng-model="book.name" class="form-control" id="inputName" placeholder="Name">
                     </div>
                 </div>
-                 <div class="col-sm-12">
+                <div class="col-sm-12">
                     <div class="form-group">
                         <label for="publication_year">Publication Year</label>
-                        <input type="text" ng-model="book.publication_year" class="form-control" id="publication_year" placeholder="Publication Year">
+                        <input type="text" ng-model="book.publication_year" class="form-control" id="publication_year"
+                               placeholder="Publication Year">
                     </div>
-                      <div class="form-group">
+                    <div class="form-group">
                         <label for="number_of_pages">Number of Pages</label>
-                        <input type="text" ng-model="book.number_of_pages" class="form-control" id="number_of_pages" placeholder="Number of Pages">
+                        <input type="text" ng-model="book.number_of_pages" class="form-control" id="number_of_pages"
+                               placeholder="Number of Pages">
                     </div>
-                     <div class="form-group">
+                    <div class="form-group">
                         <label for="isbn">ISBN</label>
                         <input type="text" ng-model="book.isbn" class="form-control" id="isbn" placeholder="Isbn">
                     </div>
-                     <div class="form-group">
-                        <label for="categories">Categories</label>
-                        <input type="text" ng-model="book.categories" class="form-control" id="categories" placeholder="Categories">
-                    </div>
-                      <div class="form-group">
+                    <div class="form-group">
                         <label for="publishing_house">Publishing House</label>
-                        <input type="text" ng-model="book.publishing_house" class="form-control" id="publishing_house" placeholder="Publishing House">
+                        <ui-select ng-model="publishing_houseSelected.selected"
+                                   class="btn-group bootstrap-select form-control"
+                                   id="publishing_house"
+                                   ng-disabled="false"
+                                   append-to-body="true"
+                                   search-enabled="true">
+                            <ui-select-match placeholder="Select Publishing House">
+                                {{$select.selected.name}}
+                            </ui-select-match>
+                            <ui-select-choices
+                                    repeat="publishing_house in publishing_houses | filter: $select.search">
+                                <span ng-bind-html="publishing_house.name"></span>
+                            </ui-select-choices>
+                        </ui-select>
                     </div>
-                      <div class="form-group">
+                    <div class="form-group">
+                        <label for="categories">Categories</label>
+                        <ui-select multiple ng-model="categoriesSelected.selected"
+                                   ng-disabled="false"
+                                   search-enabled="true"
+                                   append-to-body="true"
+                                   id="categories"
+                                   class="form-control ">
+                            <ui-select-match placeholder="Select Categories">
+                                {{$item.name}}
+                            </ui-select-match>
+                            <ui-select-choices
+                                    repeat="category in categories | filter: $select.search">
+                                {{ category.name }}
+                            </ui-select-choices>
+                        </ui-select>
+                    </div>
+                    <div class="form-group">
                         <label for="authors">Authors</label>
-                        <input type="text" ng-model="book.authors" class="form-control" id="authors" placeholder="Authors">
+                        <ui-select multiple ng-model="authorsSelected.selected"
+                                   ng-disabled="false"
+                                   search-enabled="true"
+                                   append-to-body="true"
+                                   id="authors"
+                                   class="form-control ">
+                            <ui-select-match placeholder="Select Authors">
+                                {{$item.first_name + ' ' + $item.last_name}}
+                            </ui-select-match>
+                            <ui-select-choices
+                                    repeat="author in authors | filter: $select.search">
+                                {{ author.first_name + ' ' + author.last_name }}
+                            </ui-select-choices>
+                        </ui-select>
                     </div>
                 </div>
             </div>
