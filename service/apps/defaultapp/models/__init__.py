@@ -6,4 +6,4 @@ from member import Member
 from publishing_house import PublishingHouse
 from library import Library
 from library_book import LibraryBook
-from statistics import CategoryBasedBookCounts
+from statistics import CategoryBasedBookCounts, PublishingHouseBasedBookCounts

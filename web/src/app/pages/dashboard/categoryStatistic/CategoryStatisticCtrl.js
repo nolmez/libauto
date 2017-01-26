@@ -6,10 +6,10 @@
     'use strict';
 
     angular.module('BlurAdmin.pages.dashboard')
-        .controller('TrafficChartCtrl', TrafficChartCtrl);
+        .controller('CategoryStatisticCtrl', CategoryStatisticCtrl);
 
     /** @ngInject */
-    function TrafficChartCtrl($scope, $filter, baConfig, colorHelper, $http) {
+    function CategoryStatisticCtrl($scope, $filter, baConfig, colorHelper, $http) {
 
         var receivedData = null;
         var receivedDataSorted = null;
@@ -83,7 +83,7 @@
                 ]
             };
 
-            var ctx = document.getElementById('chart-area').getContext('2d');
+            var ctx = document.getElementById('category-chart-area').getContext('2d');
             window.myDoughnut = new Chart(ctx, {
                 type: 'doughnut',
                 data: $scope.doughnutData,
